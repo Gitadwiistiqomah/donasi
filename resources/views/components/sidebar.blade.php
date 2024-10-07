@@ -23,10 +23,26 @@
     <li
         class="sidebar-item  ">
         <a href="{{ route('admin.categories.index') }}" class='sidebar-link'>
-            <i class="bi bi-grid-fill"></i>
+            <i class="bi bi-three-dots-vertical"></i>
             <span>Kategori</span>
         </a>
     </li>
+
+    <li
+        class="sidebar-item  ">
+        <a href="{{ route('admin.campaign.index') }}" class='sidebar-link'>
+            <i class="bi bi-three-dots-vertical"></i>
+            <span>Campaign</span>
+        </a>
+    </li> 
+    
+    <li
+    class="sidebar-item  ">
+    <a href="{{ route('settings.index') }}" class='sidebar-link'>
+        <i class="bi bi-three-dots-vertical"></i>
+        <span>Setting</span>
+    </a>
+</li> 
 
     
     

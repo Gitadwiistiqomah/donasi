@@ -27,4 +27,20 @@ Route::put ('/categories/{id}', [App\Http\Controllers\CategoriesController::clas
 Route::delete ('/categories/{id}', [App\Http\Controllers\CategoriesController::class, 'destroy'])->name('categories.destroy') ;
 Route::get ('/categories/{id}', [App\Http\Controllers\CategoriesController::class, 'show'])->name('categories.show') ;
 
+Route::get('/campaign', [App\Http\Controllers\CampaignController::class, 'index'])->name('campaign.index');
+Route::get ('/campaign/create', [App\Http\Controllers\CampaignController::class, 'create'])->name('campaign.create') ;
+Route::post ('/campaign', [App\Http\Controllers\CampaignController::class, 'store'])->name('campaign.store') ;
+Route::get ('/campaign/edit{id}', [App\Http\Controllers\CampaignController::class, 'edit'])->name('campaign.edit') ;
+Route::put ('/campaign/{id}', [App\Http\Controllers\CampaignController::class, 'update'])->name('campaign.update') ;
+Route::delete ('/campaign/{id}', [App\Http\Controllers\CampaignController::class, 'destroy'])->name('campaign.destroy') ;
+Route::get ('/campaign/{id}', [App\Http\Controllers\CampaignController::class, 'show'])->name('campaign.show') ;
+
 });
+
+Route::get('/settings', [App\Http\Controllers\SettingsController::class, 'index'])->name('settings.index');
+Route::get ('/settings/create', [App\Http\Controllers\SettingsController::class, 'create'])->name('settings.create') ;
+Route::post ('/settings', [App\Http\Controllers\SettingsController::class, 'store'])->name('settings.store') ;
+Route::get ('/settings/edit{id}', [App\Http\Controllers\SettingsController::class, 'edit'])->name('settings.edit') ;
+Route::put ('/settings/{id}', [App\Http\Controllers\SettingsController::class, 'update'])->name('settings.update') ;
+Route::delete ('/settings/{id}', [App\Http\Controllers\SettingsController::class, 'destroy'])->name('settings.destroy') ;
+Route::get ('/settings/{id}', [App\Http\Controllers\SettingsController::class, 'show'])->name('settings.show') ;

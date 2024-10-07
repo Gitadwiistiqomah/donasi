@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use Illuminate\Http\Request;
+use Str\Illuminate\Support\Str;
 
 class CategoriesController extends Controller
 {
@@ -33,8 +34,13 @@ class CategoriesController extends Controller
         // $categories = Categories::create($request->all());
         // return redirect()->route('categories.index'); 
 
-        Categories::create($request->all());
+        // $request->validate($request, [
+        //     'name' => 'required|unique:categories,name'  
+        // ]);
+        // $data = $request->only('name');
+        // $data =['slug'] = Str::slug($request->name);
 
+        Categories::create($request->all());
         return redirect()->route('admin.categories.index')->with('success', 'Categories berhasil ditambahkan.');
     }
 
@@ -82,7 +88,6 @@ class CategoriesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
         $categories = Categories::find($id);
         $categories->delete();
         return redirect()->route('admin.categories.index');
